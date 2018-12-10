@@ -1,0 +1,18 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: provider
+
+# dubbo 配置 还需要在启动类上添加扫描注解
+dubbo:
+  application:
+    name: provider
+  protocol:
+    name: dubbo
+    port: 20100
+  registry:
+    address: 127.0.0.1:2181
+    protocol: zookeeper
+  provider:
+    filter: -exception

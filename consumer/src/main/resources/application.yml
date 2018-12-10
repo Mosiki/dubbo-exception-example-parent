@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: consumer
+
+# dubbo 配置 还需要在启动类上添加扫描注解
+dubbo:
+  application:
+    name: consumer
+  protocol:
+    name: dubbo
+    port: 20110
+  registry:
+    address: 127.0.0.1:2181
+    protocol: zookeeper
+  consumer:
+    check: false
+    timeout: 3000
